@@ -1,0 +1,15 @@
+{
+  "name": "@savagematt/cyf-mentee-reference",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "transform": {}
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
