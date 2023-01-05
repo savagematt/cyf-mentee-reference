@@ -21,14 +21,27 @@ const animals = [
     }
 ];
 
-function onlyCats(animal) {
+function isACat(animal) {
     return animal.species === "cat";
 }
 
 describe("filter()", () => {
+    test("Predicate functions like isACat() return a boolean (true|false)", ()=>{
+
+        const animalThatMatchesPredicate = {name:"A cat", species:"cat"};
+
+        expect(isACat(animalThatMatchesPredicate))
+            .toEqual(true);
+
+        const animalThatDoesNotMatchPredicate = {name:"A dog", species:"dog"};
+
+        expect(isACat(animalThatDoesNotMatchPredicate))
+            .toEqual(false);
+    })
+
     test("Returns a new array with only the items that matched the predicate function", () => {
 
-        const actual = animals.filter(onlyCats);
+        const actual = animals.filter(isACat);
 
         const expected = expect.arrayContaining([
             {
@@ -49,8 +62,9 @@ describe("filter()", () => {
         const actual = animals.reduce(
 
             (result, nextItem) => {
-                const isACat = onlyCats(nextItem);
-                if (isACat) {
+                const itemIsACat = isACat(nextItem);
+
+                if (itemIsACat) {
                     result.push(nextItem);
                 }
                 return result;

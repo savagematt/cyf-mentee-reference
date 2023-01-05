@@ -27,6 +27,22 @@ function getAnimalToys(animal) {
 }
 
 describe("flatMap()", () => {
+
+    test("Flatmap functions like getAnimalToys() take a value and return an array", () => {
+
+        const animal = {
+            name: "Bob", species: "cat",
+            toys: ["toy 1", "toy 2"]
+        };
+
+        const actualArray = getAnimalToys(animal);
+
+        const expectedArray = ["toy 1", "toy 2"];
+
+        expect(actualArray)
+            .toEqual(expectedArray);
+    })
+
     test("Takes a function that returns a new array for each item, and puts all of those arrays in to one", () => {
 
         const actual = animals.flatMap(getAnimalToys);
@@ -42,6 +58,7 @@ describe("flatMap()", () => {
     })
 
     test("Can also be implemented using reduce()", () => {
+
         const actual = animals.reduce(
             (result, nextItem) => {
                 result.push(...nextItem.toys)

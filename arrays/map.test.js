@@ -26,6 +26,19 @@ function fullName(animal) {
 }
 
 describe("map()", () => {
+
+    test("Mapping functions take one type of value (e.g. an animal) and return another (e.g. a string)",()=>{
+
+        const animal = {name:"Bob",species:"cat"};
+
+        const actualString = fullName(animal);
+
+        const expectedString = "Bob the cat";
+
+        expect(actualString)
+            .toEqual(expectedString)
+    });
+
     test("Returns an array containing the result of applying a function to each item in the source array", () => {
 
         const actual = animals.map(fullName);
@@ -58,6 +71,7 @@ describe("map()", () => {
             "Greg the rabbit",
             "Nyan the cat",
         ]);
+
         expect(actual).toEqual(expected);
     });
 });
