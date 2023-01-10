@@ -40,7 +40,6 @@ describe("filter()", () => {
     })
 
     test("Returns a new array with only the items that matched the predicate function", () => {
-
         const actual = animals.filter(isACat);
 
         const expected = expect.arrayContaining([
@@ -57,7 +56,7 @@ describe("filter()", () => {
         expect(actual).toEqual(expected);
     })
 
-    test("Can also be implemented using reduce()", () => {
+    test("[advanced] Can also be implemented using reduce()", () => {
 
         const actual = animals.reduce(
 

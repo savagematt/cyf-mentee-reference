@@ -26,8 +26,7 @@ function fullName(animal) {
 }
 
 describe("map()", () => {
-
-    test("Mapping functions take one type of value (e.g. an animal) and return another (e.g. a string)",()=>{
+    test("Mapping functions like fullName() take one type of value (e.g. an animal) and return another (e.g. a string)",()=> {
 
         const animal = {name:"Bob",species:"cat"};
 
@@ -54,7 +53,7 @@ describe("map()", () => {
         expect(actual).toEqual(expected);
     });
 
-    test("Can also be implemented using reduce()", () => {
+    test("[advanced] Can also be implemented using reduce()", () => {
 
         const actual = animals.reduce(
             (result, nextItem) => {

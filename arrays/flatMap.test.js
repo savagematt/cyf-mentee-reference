@@ -43,7 +43,7 @@ describe("flatMap()", () => {
             .toEqual(expectedArray);
     })
 
-    test("Takes a function that returns a new array for each item, and puts all of those arrays in to one", () => {
+    test("flatMap() takes a function that returns a new array for each item, and puts all of those arrays in to one", () => {
 
         const actual = animals.flatMap(getAnimalToys);
 
@@ -57,7 +57,7 @@ describe("flatMap()", () => {
         expect(actual).toEqual(expected);
     })
 
-    test("Can also be implemented using reduce()", () => {
+    test("[advanced] Can also be implemented using reduce()", () => {
 
         const actual = animals.reduce(
             (result, nextItem) => {
