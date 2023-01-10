@@ -41,7 +41,7 @@ describe("Objects", () => {
             .toEqual("My name is Zaw")
     });
 
-    test('In older versions of Javascript you had to use prototypes of you wanted to use "new"' +
+    test('[advanced] In older versions of Javascript you had to use prototypes of you wanted to use "new"' +
         '(but you only need to understand this if you are looking at old code)', () => {
 
         function Person(name) {
