@@ -33,7 +33,7 @@ describe("Objects", () => {
             .toEqual("Software Developer")
     });
 
-    test('Objects can be created with classes and "new"', () => {
+    test('Objects created with classes and "new" can have methods (functions that are attached to the object)', () => {
         class Person {
             constructor(name) {
                 this.name = name;
