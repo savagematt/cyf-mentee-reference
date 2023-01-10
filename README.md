@@ -1,7 +1,14 @@
 # Running the tests in VSCode
 
-Install:
+From the terminal run:
+```
+npm install
+```
+
+Install the Jest extension for VSCode:
 https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest
+
+> NB: You may need to restart VSCode before the green arrows appear for you
 
 Click the green arrow next to the test you want to run:
 
