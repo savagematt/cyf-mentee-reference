@@ -1,15 +1,21 @@
 describe("Objects", () => {
     test('Objects are just a bag of items ("fields") with names', () => {
 
-        const myObject = {};
+        // You can set fields when you create the object
+        const myObject = {
+            numberOfLegs:2
+        };
 
-        // You can set fields on an object like this:
+        // ...or can set fields on an existing object like this:
         myObject["name"] = "Zaw";
 
-        // Or like this:
+        // ...or like this:
         myObject.job = "Software Developer"
 
         // However you set the fields, you can get the value back out like this:
+        expect(myObject["numberOfLegs"])
+            .toEqual(2)
+
         expect(myObject["name"])
             .toEqual("Zaw")
 
@@ -17,6 +23,9 @@ describe("Objects", () => {
             .toEqual("Software Developer")
 
         // Or like this:
+        expect(myObject.numberOfLegs)
+            .toEqual(2)
+
         expect(myObject.name)
             .toEqual("Zaw")
 
